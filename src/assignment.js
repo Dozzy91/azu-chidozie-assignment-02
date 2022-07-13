@@ -14,7 +14,12 @@ const assignment = {};
  * @returns number the sum of the numbers
  */
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    let i = 0 
+    for (let v of arrayOfNumbers){
+        i+=v
+    }
+    return i
+    // return arrayOfNumbers.length;
 }
 // assignment.sumOfNumbers = sumOfNumbers;
 
@@ -28,9 +33,16 @@ function sumOfNumbers(arrayOfNumbers) {
  * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    let initial = 0
+    for (let number of arrayOfNumbers){
+        if (number % 2 == 0){
+            initial+=1
+        }
+    }
+    return initial
+    // return arrayOfNumbers.length;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3
@@ -47,9 +59,15 @@ function countEvenNumbers(arrayOfNumbers) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+    let tempInFahrenheit = []
+    for (let tempInCelsius of arrayOfNumbers){
+        let newTemp = tempInCelsius * (9/5) + 32
+        tempInFahrenheit.push(Math.trunc(newTemp))
+    }
+    return tempInFahrenheit
+    // return arrayOfNumbers;
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
